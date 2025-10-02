@@ -1,15 +1,12 @@
-# Use official Python image
-FROM python:3.11-slim
+FROM python:latest
 
-# Set workdir
-WORKDIR /app
+RUN apt-get update -y && apt-get upgrade -y
 
-# Copy files
-COPY . .
+RUN pip3 install -U pip
 
-# Install dependencies
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+COPY . /app/
+WORKDIR /app/
+RUN pip3 install --upgrade pip
+RUN pip3 install -U -r requirements.txt
 
-# Run the bot
-CMD ["python", "-m", "EsproAiChat.start"]
+CMD bash start
