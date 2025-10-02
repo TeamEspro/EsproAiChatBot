@@ -8,7 +8,6 @@
         "API_ID": { "description": "Input api id here", "required": true },
         "API_HASH": { "description": "Input api hash here", "required": true },
         "ESPRO_API_KEY": { "description": "Your Espro API Key", "required": true },
-        "ESPRO_API_URL": { "description": "Espro API Endpoint", "required": true },
         "DEFAULT_MODEL": { "description": "Leave empty for default model", "required": false }
     },
     "buildpacks": [
